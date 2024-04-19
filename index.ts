@@ -65,7 +65,7 @@ while (true) {
       if (!continueGame) {
         console.log(
           chalk.yellow(
-            `\n\t\tTHANKS FOR USING THIS GAME CREATOR BY: "RAHEEM VEER"\n`
+            `\n\t\tTHANKS FOR USING THIS GAME CREATOR BY: "ZAKIA BASHIR"\n`
           )
         );
       }

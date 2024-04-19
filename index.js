@@ -27,10 +27,10 @@ while (true) {
                 {
                     name: "guessingNum",
                     type: "number",
-                    message: "ENTER YOUR NUMBER BETWEEN 1-6:",
+                    message: "ENTER YOUR NUMBER BETWEEN 1-20:",
                 },
             ]);
-            let compNum = Math.floor(Math.random() * 6 + 1);
+            let compNum = Math.floor(Math.random() * 20 + 1);
             if (userInput.guessingNum === compNum) {
                 console.log(chalk.green(`\n HEY CONGRATS YOU GUESS RIGHT NUMBER.
     YOUR NUMBER IS "${userInput.guessingNum}" AND COMPUTER NUMBER IS "${compNum}"\n`));
@@ -47,7 +47,7 @@ while (true) {
             ]);
             continueGame = wantToContinue;
             if (!continueGame) {
-                console.log(chalk.yellow(`\n\t\tTHANKS FOR USING THIS GAME CREATOR BY: "RAHEEM VEER"\n`));
+                console.log(chalk.yellow(`\n\t\tTHANKS FOR USING THIS GAME CREATOR BY: "ZAKIA BASHIR"\n`));
             }
         }
     }
