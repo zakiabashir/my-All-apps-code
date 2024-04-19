@@ -18,69 +18,11 @@ while (true) {
         "TODO LIST APP:",
         "CURRENCY CONVERTER",
         "WORDS-COUNTING-APP",
-        "ROCK, PAPER OR SCISSSOR GAME",
         "EXIT TO THE PROGRAM ?"
       ],
     },
   ]);
-  if (allcodes.codes === "ROCK, PAPPER OR SCISSSOR GAME:") {
-    console.log(
-      chalk.yellow(
-        `\t\t================================================\n\t\t  WELLCOME TO THE ROCK, PAPPER, SCEISSORS GAME:\n\t\t================================================`
-      )
-    );
-    let continueGame = true;
-    while (continueGame) {
-      const rockGame = await inquirer.prompt([
-        {
-          name: "rps",
-          message: "SELECT ONE OPTION:",
-          type: "list",
-          choices: ["ROCK", "PAPER", "SCISSOR"],
-        },
-      ]);
-
-      const compOption: number = Math.floor(Math.random() * 3);
-      const values: string = ["ROCK", "PAPER", "SCISSOR"][compOption];
-
-      if (
-        (rockGame.rps === "ROCK" && values === "SCISSOR") ||
-        (rockGame.rps === "PAPER" && values === "ROCK") ||
-        (rockGame.rps === "SCISSOR" && values === "PAPER")
-      ) {
-        console.log(chalk.green(`\n\t\t"YOU WIN THIS MATCH:"`));
-        console.log(chalk.green(`\t\tCOMPUTER CHOOSE "${values}"\n`));
-      } else if (
-        (values === "ROCK" && rockGame.rps === "SCISSOR") ||
-        (values === "PAPER" && rockGame.rps === "ROCK") ||
-        (values === "SCISSOR" && rockGame.rps === "PAPER")
-      ) {
-        console.log(chalk.red(`\n\t\t"COMPUTER WIN THIS MATCH:"`));
-        console.log(chalk.red(`\t\tCOMPUTER CHOOSE "${values}"\n`));
-      } else if (rockGame.rps === values) {
-        console.log(chalk.yellow(`\n\t\tMATCH IS DRAW:`));
-        console.log(chalk.yellow(`\t\tCOMPUTER CHOOSE "${values}"\n`));
-      } else {
-        console.log(chalk.red(`\t\tPROGRAM IS VALID:`));
-      }
-
-      const { wantToContinue } = await inquirer.prompt([
-        {
-          name: "wantToContinue",
-          type: "confirm",
-          message: "DO YOU WANT TO CONTINUE THIS GAME ?",
-        },
-      ]);
-      continueGame = wantToContinue;
-      if (!continueGame) {
-        console.log(
-          chalk.green(
-            `\n\t\tTHANKS FOR USING THIS GAME CREATOR BY: "RAHEEM VEER"\n`
-          )
-        );
-      }
-    }
-  } else if (allcodes.codes === "NUMBER GUESSING GAME:") {
+   if (allcodes.codes === "NUMBER GUESSING GAME:") {
     console.log(
       chalk.yellow(
         `\t\t=============================================\n\t\t    WELLCOME TO THE GUESSING NUMBER GAME:\n\t\t==============================================`
@@ -93,11 +35,11 @@ while (true) {
         {
           name: "guessingNum",
           type: "number",
-          message: "ENTER YOUR NUMBER BETWEEN 1-6:",
+          message: "ENTER YOUR NUMBER BETWEEN 1-20:",
         },
       ]);
 
-      let compNum = Math.floor(Math.random() * 6 + 1);
+      let compNum = Math.floor(Math.random() * 20 + 1);
 
       if (userInput.guessingNum === compNum) {
         console.log(
